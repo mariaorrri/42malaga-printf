@@ -1,16 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mariorte <mariorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/26 16:23:34 by mariorte          #+#    #+#             */
-/*   Updated: 2024/12/27 12:45:20 by mariorte         ###   ########.fr       */
+/*   Created: 2024/12/16 19:50:17 by mariorte          #+#    #+#             */
+/*   Updated: 2024/12/16 19:58:34 by mariorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_printf(char const *ctrl_str, ...)
+#include "libft.h"
+
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-    
+	void	*ptr;
+
+	ptr = malloc(nmemb * size);
+	if (ptr == NULL)
+		return (NULL);
+	ft_bzero(ptr, size * nmemb);
+	return (ptr);
 }

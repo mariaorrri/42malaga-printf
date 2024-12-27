@@ -1,16 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mariorte <mariorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/26 16:23:34 by mariorte          #+#    #+#             */
-/*   Updated: 2024/12/27 12:45:20 by mariorte         ###   ########.fr       */
+/*   Created: 2024/12/26 10:00:27 by mariorte          #+#    #+#             */
+/*   Updated: 2024/12/26 10:23:23 by mariorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_printf(char const *ctrl_str, ...)
+#include "libft.h"
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-    
+	int	i;
+
+	i = 0;
+	if (!s)
+		return ;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }

@@ -1,16 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mariorte <mariorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/26 16:23:34 by mariorte          #+#    #+#             */
-/*   Updated: 2024/12/27 12:45:20 by mariorte         ###   ########.fr       */
+/*   Created: 2024/12/16 18:24:48 by mariorte          #+#    #+#             */
+/*   Updated: 2024/12/16 18:50:10 by mariorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_printf(char const *ctrl_str, ...)
+#include "libft.h"
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-    
+	size_t		i;
+
+	i = 0;
+	while (i < n && (s1[i] || s2[i]))
+	{
+		if (s1[i] != s2[i])
+			return (((unsigned char *)(s1))[i] - ((unsigned char *)(s2))[i]);
+		i++;
+	}
+	return (0);
 }

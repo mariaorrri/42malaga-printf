@@ -1,16 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mariorte <mariorte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/26 16:23:34 by mariorte          #+#    #+#             */
-/*   Updated: 2024/12/27 12:45:20 by mariorte         ###   ########.fr       */
+/*   Created: 2024/12/26 10:25:56 by mariorte          #+#    #+#             */
+/*   Updated: 2024/12/26 10:43:37 by mariorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_printf(char const *ctrl_str, ...)
+#include "libft.h"
+
+void	ft_putendl_fd(char *s, int fd)
 {
-    
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
