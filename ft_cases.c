@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_cases.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mariorte <mariorte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/27 12:59:56 by mariorte          #+#    #+#             */
-/*   Updated: 2025/01/08 20:24:49 by mariorte         ###   ########.fr       */
+/*   Created: 2025/01/08 20:24:06 by mariorte          #+#    #+#             */
+/*   Updated: 2025/01/08 20:32:39 by mariorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Define todas las funciones y estructuras necesarias
-#ifndef PRINTF_H
-# define PRINTF_H
-# include "libft/libft.h"
-# include <stdlib.h>
-# include <stdio.h>
-# include <unistd.h>
-# include <stdarg.h>
+/* #include "printf.h"
 
-
-#endif
+int	ft_cases(char type)
+{
+	if (type == 'c')
+		
+} */

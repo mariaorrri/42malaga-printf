@@ -6,7 +6,7 @@
 /*   By: mariorte <mariorte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 16:23:34 by mariorte          #+#    #+#             */
-/*   Updated: 2025/01/08 20:09:50 by mariorte         ###   ########.fr       */
+/*   Updated: 2025/01/08 20:20:39 by mariorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ int	ft_printf(char const *fmt, ...)
 	{
 		if (*fmt == '%')
 		{
-			if (*fmt + 1 == 'c')
+			fmt++;
+			if (*fmt == 'c')
 			{
 				c = va_arg(args, int);
 				write(1, &c, 1);
-				fmt++;
 			}
 		}
 		else
