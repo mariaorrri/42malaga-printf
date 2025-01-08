@@ -8,6 +8,7 @@ OBJTS = $(SRC:.c=.o)
 
 # RULES
 all: $(NAME)
+
 $(NAME): $(OBJTS)
 	ar rcs $(NAME) $(OBJTS)
 
