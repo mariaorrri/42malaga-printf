@@ -8,12 +8,9 @@ NAME = libftprintf.a
 SRC = $(shell find . -name "ft_*.c")
 OBJTS = $(SRC:.c=.o)
 
-MAIN_SRC = ft_printf.c
-MAIN_OBJ = ft_printf.o
-
 # RULES
 all: $(NAME)
-	$(CC) $(CFLAGS) $(MAIN_OBJ) $(LDFLAGS) -o main
+	$(CC) $(CFLAGS) $(OBJTS) $(LDFLAGS) -o main
 
 $(NAME): $(OBJTS) $(LIBFT)
 	ar rcs $(NAME) $(OBJTS)
@@ -25,7 +22,7 @@ $(LIBFT):
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJTS) $(MAIN_OBJ)
+	rm -f $(OBJTS)
 
 fclean: clean
 	rm -f $(NAME) main

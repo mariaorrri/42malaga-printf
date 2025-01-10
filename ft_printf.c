@@ -6,7 +6,7 @@
 /*   By: mariorte <mariorte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 16:23:34 by mariorte          #+#    #+#             */
-/*   Updated: 2025/01/08 20:20:39 by mariorte         ###   ########.fr       */
+/*   Updated: 2025/01/10 18:59:46 by mariorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int	ft_printf(char const *fmt, ...)
 {
 	va_list	args;
-	char	c;
 	int		ctr;
 
 	va_start(args, fmt);
@@ -27,8 +26,11 @@ int	ft_printf(char const *fmt, ...)
 			fmt++;
 			if (*fmt == 'c')
 			{
-				c = va_arg(args, int);
-				write(1, &c, 1);
+				ft_char(va_arg(args, int), ctr);
+			}
+			else if (*fmt == 's')
+			{
+				ft_str(va_arg(args, char *), ctr);
 			}
 		}
 		else
@@ -42,6 +44,16 @@ int	ft_printf(char const *fmt, ...)
 
 int	main(void)
 {
-	printf("Probando caracter %c \n", 'A');
-	ft_printf("Probando caracter %c ", 'A');
+/* 	printf("Probando caracter %c \n", 'A');
+	ft_printf("Probando caracter %c ", 'A'); */
+/* 	printf("Probando string %s \n", "eeey klk pana");
+	ft_printf("Probando string %s \n", "eeey klk pana"); */
+/* 	printf("Probemos un %cix a ver %s o no %c \n", 'm', "k pasa", '?');
+	ft_printf("Probemos un %cix a ver %s o no %c", 'm', "k pasa", '?'); */
+	int	*ptr;
+	int	a;
+
+	a = 4;
+	ptr = &a;
+	printf("Direccion de memoria el puntero %p", ptr);
 }

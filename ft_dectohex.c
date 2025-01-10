@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_cases.c                                         :+:      :+:    :+:   */
+/*   ft_dectohex.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mariorte <mariorte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/08 20:24:06 by mariorte          #+#    #+#             */
-/*   Updated: 2025/01/10 18:19:22 by mariorte         ###   ########.fr       */
+/*   Created: 2025/01/10 19:35:09 by mariorte          #+#    #+#             */
+/*   Updated: 2025/01/10 19:37:45 by mariorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-/* int	ft_cases(char fmt)
+char	ft_dectohex(int dec)
 {
-	if (fmt == 'c')
-        ft_char(va_arg(args, int), ctr);
-} */
+	char	hexcale;
+
+	hexcale = "0123456789ABCDEF";
+
+	
+}

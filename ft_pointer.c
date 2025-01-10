@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_cases.c                                         :+:      :+:    :+:   */
+/*   ft_pointer.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mariorte <mariorte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/08 20:24:06 by mariorte          #+#    #+#             */
-/*   Updated: 2025/01/10 18:19:22 by mariorte         ###   ########.fr       */
+/*   Created: 2025/01/10 19:02:12 by mariorte          #+#    #+#             */
+/*   Updated: 2025/01/10 19:07:11 by mariorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-/* int	ft_cases(char fmt)
+void	ft_pointer(void *ptr, int ctr)
 {
-	if (fmt == 'c')
-        ft_char(va_arg(args, int), ctr);
-} */
+	char	*dir;
+	int 	i;
+	
+	*dir = &ptr;
+	i = 0;
+	while (dir[i] != 0)
+	{
+		write(1, &dir[i], 1);
+		i++;
+		ctr++;
+	}
+}
