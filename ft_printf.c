@@ -6,7 +6,7 @@
 /*   By: mariorte <mariorte@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 16:23:34 by mariorte          #+#    #+#             */
-/*   Updated: 2025/01/10 18:59:46 by mariorte         ###   ########.fr       */
+/*   Updated: 2025/01/11 12:46:52 by mariorte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,15 @@ int	ft_printf(char const *fmt, ...)
 		{
 			fmt++;
 			if (*fmt == 'c')
-			{
-				ft_char(va_arg(args, int), ctr);
-			}
+			    ft_char(va_arg(args, int), ctr);
 			else if (*fmt == 's')
-			{
 				ft_str(va_arg(args, char *), ctr);
-			}
+            else if (*fmt == 'p')
+                ft_pointer(va_arg(args, void *), ctr);
 		}
 		else
-			write(1, fmt, 1);
+			ft_putchar(*fmt, ctr);
 		fmt++;
-		ctr++;
 	}
 	va_end(args);
 	return (ctr);
@@ -52,8 +49,15 @@ int	main(void)
 	ft_printf("Probemos un %cix a ver %s o no %c", 'm', "k pasa", '?'); */
 	int	*ptr;
 	int	a;
+    unsigned long dir;
 
 	a = 4;
 	ptr = &a;
-	printf("Direccion de memoria el puntero %p", ptr);
+    dir = (unsigned long)&a;
+	printf("Direccion de memoria el puntero %p \n", ptr);
+    printf("direccion de memoria en decimal: %li \n", dir);
+    ft_pointer(ptr, 1);
+    
+/*     ft_printf("Direccion de memoria el puntero %p", ptr);
+    printf("Direccion de memoria el puntero %p \n", ptr); */
 }
